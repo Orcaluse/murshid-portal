@@ -95,76 +95,49 @@
         transition-duration:.01ms!important;
       }
     }
-/* الرسمة الفنية الرئيسية */
+/* الصورة الرئيسية */
 .hero-art {
   position: relative;
-  isolation: isolate;
   overflow: hidden;
-  min-height: 390px;
-  border: 1px solid #EADFCF;
-  border-radius: 36px;
-  background: linear-gradient(145deg, #F4F7F5 0%, #FBF8F3 55%, #F5EFE6 100%);
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  border-radius: 28px;
+  background: transparent;
+  box-shadow: none;
 }
 
 .hero-art::before,
 .hero-art::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.hero-art::before {
-  width: 240px;
-  height: 240px;
-  top: -65px;
-  left: -55px;
-  background: #CDE1D6;
-  opacity: .7;
-}
-
-.hero-art::after {
-  width: 180px;
-  height: 180px;
-  bottom: -65px;
-  right: -35px;
-  background: #EADFCF;
-  opacity: .8;
+  display: none;
 }
 
 .hero-illustration {
   display: block;
   width: 100%;
-  max-width: 410px;
+  max-width: none;
   height: auto;
-  margin: 0 auto;
+  margin: 0;
+  border-radius: 28px;
+  object-fit: cover;
 }
 
 .art-caption {
-  position: relative;
-  z-index: 1;
-  margin: 0 20px 20px;
-  padding: 13px 16px;
-  border: 1px solid rgba(234, 223, 207, .9);
-  border-radius: 18px;
-  background: rgba(255, 255, 255, .82);
-  color: #2C5244;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 700;
+  display: none;
 }
+
 @media (max-width: 640px) {
   .hero-art {
-    min-height: auto;
-    border-radius: 28px;
+    min-height: 0;
+    border-radius: 22px;
   }
 
   .hero-illustration {
-    max-width: 340px;
+    width: 100%;
+    height: auto;
+    border-radius: 22px;
   }
-}
-  </style>
+}  </style>
 </head>
 
 <body class="min-h-screen relative">
