@@ -519,8 +519,7 @@
     const filterButtons = [...document.querySelectorAll(".filter-btn")];
     const emptyMessage = document.getElementById("emptyMessage");
     const resultCount = document.getElementById("resultCount");
-    let activeFilter = "all";
-
+let activeFilter = "none";
     function createCard(item) {
       const card = document.createElement("a");
       card.href = item.url;
