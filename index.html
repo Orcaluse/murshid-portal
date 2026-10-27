@@ -1,15 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJPNWC84T9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GJPNWC84T9');
-  </script>
-
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GJPNWC84T9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GJPNWC84T9');
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#FBF8F3">
@@ -45,16 +45,13 @@
 
   <style>
     * { box-sizing:border-box; }
-
     html { scroll-behavior:smooth; }
-
     body {
       font-family:'Tajawal',sans-serif;
       background:#FBF8F3;
       color:#2E2720;
       overflow-x:hidden;
     }
-
     .blob {
       position:absolute;
       z-index:-1;
@@ -63,23 +60,14 @@
       border-radius:50%;
       opacity:.7;
     }
-
     .blob-one {
-      top:-100px;
-      right:-120px;
-      width:420px;
-      height:420px;
+      top:-100px;right:-120px;width:420px;height:420px;
       background:#CDE1D6;
     }
-
     .blob-two {
-      top:700px;
-      left:-180px;
-      width:450px;
-      height:450px;
+      top:700px;left:-180px;width:450px;height:450px;
       background:#EADFCF;
     }
-
     .organic-card {
       background:rgba(255,255,255,.88);
       backdrop-filter:blur(12px);
@@ -87,34 +75,27 @@
       box-shadow:0 10px 30px -15px rgba(58,106,88,.18);
       transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
     }
-
     .organic-card:hover {
       transform:translateY(-5px);
       border-color:rgba(58,106,88,.4);
       box-shadow:0 18px 38px -18px rgba(58,106,88,.3);
     }
-
-    input:focus-visible,
-    button:focus-visible,
-    a:focus-visible {
+    .filter-btn { transition:all .2s ease; }
+    .filter-btn[aria-pressed="true"] {
+      background:#3A6A58;
+      color:white;
+      border-color:#3A6A58;
+      box-shadow:0 5px 14px rgba(58,106,88,.18);
+    }
+    input:focus-visible,button:focus-visible,a:focus-visible {
       outline:3px solid rgba(74,122,103,.45);
       outline-offset:3px;
     }
-
     .skip-link {
-      position:absolute;
-      top:-100px;
-      right:12px;
-      background:#1E382F;
-      color:white;
-      padding:12px;
-      z-index:100;
+      position:absolute;top:-100px;right:12px;
+      background:#1E382F;color:white;padding:12px;z-index:100;
     }
-
-    .skip-link:focus {
-      top:12px;
-    }
-
+    .skip-link:focus { top:12px; }
     @media (prefers-reduced-motion:reduce) {
       *,*::before,*::after {
         scroll-behavior:auto!important;
@@ -122,56 +103,53 @@
         transition-duration:.01ms!important;
       }
     }
+/* الصورة الرئيسية */
+.hero-art {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  border-radius: 28px;
+  background: transparent;
+  box-shadow: none;
+}
 
-    /* الصورة الرئيسية */
-    .hero-art {
-      position:relative;
-      overflow:hidden;
-      width:100%;
-      min-height:0;
-      border:0;
-      border-radius:28px;
-      background:transparent;
-      box-shadow:none;
-    }
+.hero-art::before,
+.hero-art::after {
+  display: none;
+}
 
-    .hero-art::before,
-    .hero-art::after {
-      display:none;
-    }
+.hero-illustration {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  border-radius: 28px;
+  object-fit: cover;
+}
 
-    .hero-illustration {
-      display:block;
-      width:100%;
-      max-width:none;
-      height:auto;
-      margin:0;
-      border-radius:28px;
-      object-fit:cover;
-    }
+.art-caption {
+  display: none;
+}
 
-    .art-caption {
-      display:none;
-    }
+@media (max-width: 640px) {
+  .hero-art {
+    min-height: 0;
+    border-radius: 22px;
+  }
 
-    @media (max-width:640px) {
-      .hero-art {
-        min-height:0;
-        border-radius:22px;
-      }
-
-      .hero-illustration {
-        width:100%;
-        height:auto;
-        border-radius:22px;
-      }
-    }
-  </style>
+  .hero-illustration {
+    width: 100%;
+    height: auto;
+    border-radius: 22px;
+  }
+}  </style>
 </head>
 
 <body class="min-h-screen relative">
   <a class="skip-link rounded-xl" href="#main">انتقل إلى المحتوى</a>
-
   <div class="blob blob-one" aria-hidden="true"></div>
   <div class="blob blob-two" aria-hidden="true"></div>
 
@@ -181,7 +159,6 @@
     <header class="py-5 sm:py-7 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-sand-200/80">
       <a href="#" class="flex items-center gap-3 no-underline">
         <div class="w-12 h-12 rounded-2xl bg-sage-700 text-white flex items-center justify-center text-2xl shadow-lg">🌿</div>
-
         <div>
           <span class="block text-xl font-extrabold text-sage-900">بوابة المرشد الرقمي</span>
           <span class="block text-xs text-sand-800">مدرسة ابن عباس الثانوية للبنين</span>
@@ -190,8 +167,7 @@
 
       <a
         href="https://script.google.com/macros/s/AKfycbzt_1W-sluRF6LYKVmkgW7H7Bfn-vdPM0IoN80uhu29s9Y2OcIhsgAY7t5tMLrIA9C5Mg/exec"
-        target="_blank"
-        rel="noopener noreferrer"
+        target="_blank" rel="noopener noreferrer"
         class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full bg-sage-700 hover:bg-sage-800 text-white font-bold shadow-md transition">
         💬 تواصل مع المرشد
         <span aria-hidden="true">←</span>
@@ -201,7 +177,6 @@
     <!-- المقدمة -->
     <section class="py-12 sm:py-16">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-9 items-center">
-
         <div class="lg:col-span-7 text-center sm:text-right">
           <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-100 text-sage-800 text-sm font-bold border border-sage-200">
             🌱 مساحة إرشادية رقمية
@@ -223,123 +198,60 @@
           </div>
 
           <a href="#resources" class="mt-7 inline-flex items-center gap-2 rounded-full bg-sage-700 px-6 py-3 text-white font-bold hover:bg-sage-800 transition">
-            تصفّح الأدوات والمواد
-            <span aria-hidden="true">↓</span>
+            تصفّح الأدوات والمواد <span aria-hidden="true">↓</span>
           </a>
-        </div>
+       
+</div>
+<div class="lg:col-span-5">
+  <div class="hero-art shadow-xl">
+    <img
+      class="hero-illustration"
+      src="assets/images/hero-guidance.png"
+      alt="طالب يستكشف خياراته المستقبلية"
+    >
+  </div>
+</div>
 
-        <div class="lg:col-span-5">
-          <div class="hero-art shadow-xl">
-            <img
-              class="hero-illustration"
-              src="assets/images/hero-guidance.png"
-              alt="طالب يستكشف خياراته المستقبلية">
-          </div>
-        </div>
+</section>
 
-      </div>
-    </section>
 
-    <!-- البحث والمساحتان -->
+    <!-- البحث والتصنيفات -->
     <main id="main">
       <section id="resources" class="mb-7">
-
         <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <h2 class="text-2xl sm:text-3xl font-black text-sage-900">اختار المساحة المناسبة إلك</h2>
-            <p class="mt-2 text-sm text-sand-800">اختار مساحة، أو ابحث مباشرة عن أداة أو موضوع.</p>
+            <p class="mt-2 text-sm text-sand-800">ابحث عن موضوع، أو اختار فئة لتظهر المواد المرتبطة فيها.</p>
           </div>
 
           <div class="relative w-full md:w-80">
             <label for="searchInput" class="sr-only">ابحث عن أداة أو موضوع</label>
             <input
-              type="search"
-              id="searchInput"
-              autocomplete="off"
+              type="search" id="searchInput" autocomplete="off"
               placeholder="ابحث عن أداة أو موضوع..."
               class="w-full rounded-2xl border border-sand-200 bg-white py-3 pr-11 pl-4 text-sm shadow-sm">
-
             <span class="absolute right-4 top-1/2 -translate-y-1/2" aria-hidden="true">🔍</span>
           </div>
         </div>
 
-        <!-- البطاقتان الرئيسيتان -->
-        <div id="spaceCards" class="mt-7 grid grid-cols-1 md:grid-cols-2 gap-5">
-
-          <button
-            type="button"
-            data-space="student"
-            class="organic-card group text-right rounded-4xl p-6 sm:p-8 min-h-64 sm:min-h-72 flex flex-col justify-between border border-sage-200 bg-gradient-to-br from-white to-sage-100">
-
-            <span class="flex items-center justify-between gap-4">
-              <span class="w-16 h-16 rounded-3xl bg-sage-700 text-white flex items-center justify-center text-3xl shadow-md" aria-hidden="true">🎓</span>
-
-              <span class="w-11 h-11 rounded-full bg-sage-700 text-white flex items-center justify-center text-2xl transition-transform group-hover:-translate-x-1" aria-hidden="true">←</span>
-            </span>
-
-            <span class="block mt-7">
-              <span class="block text-2xl sm:text-3xl font-black text-sage-900">مساحة الطلاب</span>
-
-              <span class="block mt-3 text-base sm:text-lg leading-relaxed text-sand-800 font-medium">
-                أدوات ومواد إرشادية تساعدك في رحلتك الدراسية وفهم نفسك والتعامل مع المواقف اليومية.
-              </span>
-            </span>
-          </button>
-
-          <button
-            type="button"
-            data-space="parent"
-            class="organic-card group text-right rounded-4xl p-6 sm:p-8 min-h-64 sm:min-h-72 flex flex-col justify-between border border-sand-200 bg-gradient-to-br from-white to-sand-100">
-
-            <span class="flex items-center justify-between gap-4">
-              <span class="w-16 h-16 rounded-3xl bg-[#8B6A3E] text-white flex items-center justify-center text-3xl shadow-md" aria-hidden="true">👨‍👩‍👦</span>
-
-              <span class="w-11 h-11 rounded-full bg-[#8B6A3E] text-white flex items-center justify-center text-2xl transition-transform group-hover:-translate-x-1" aria-hidden="true">←</span>
-            </span>
-
-            <span class="block mt-7">
-              <span class="block text-2xl sm:text-3xl font-black text-sage-900">مساحة ولي الأمر</span>
-
-              <span class="block mt-3 text-base sm:text-lg leading-relaxed text-sand-800 font-medium">
-                إرشادات وموارد عملية لمساندة أبنائك والتعامل مع التحديات التربوية بهدوء ووعي.
-              </span>
-            </span>
-          </button>
-
+        <div class="mt-5 flex flex-wrap gap-2" id="filterContainer" aria-label="تصفية المواد">
+          <button type="button" data-filter="all" aria-pressed="true" class="filter-btn rounded-full border border-sage-700 px-5 py-2.5 text-sm font-bold">الكل 🌟</button>
+          <button type="button" data-filter="student" aria-pressed="false" class="filter-btn rounded-full border border-sand-200 bg-white px-5 py-2.5 text-sm font-bold">للطلاب 🎓</button>
+          <button type="button" data-filter="parent" aria-pressed="false" class="filter-btn rounded-full border border-sand-200 bg-white px-5 py-2.5 text-sm font-bold">لولي الأمر 👨‍👩‍👦</button>
+          <button type="button" data-filter="library" aria-pressed="false" class="filter-btn rounded-full border border-sand-200 bg-white px-5 py-2.5 text-sm font-bold">المكتبة الإرشادية 📚</button>
         </div>
-
-        <!-- شريط المساحة المختارة -->
-        <div id="selectedSpaceBar" class="hidden mt-6 items-center justify-between gap-3">
-          <p id="selectedSpaceTitle" class="text-lg font-extrabold text-sage-900"></p>
-
-          <button
-            id="backToSpaces"
-            type="button"
-            class="rounded-full border border-sand-200 bg-white px-4 py-2 text-sm font-bold text-sage-800 hover:bg-sage-100">
-            الرجوع للمساحتين ←
-          </button>
-        </div>
-
         <p id="resultCount" class="mt-4 text-xs text-sand-800" aria-live="polite"></p>
       </section>
 
-      <!-- بطاقات الأدوات والمواد -->
+      <!-- البطاقات تُنشأ تلقائيًا من قائمة الروابط أدناه -->
       <section aria-label="الأدوات والمواد الإرشادية" class="mb-12">
-        <div id="cardsGrid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
 
         <div id="emptyMessage" class="hidden py-14 text-center">
           <div class="text-4xl mb-3" aria-hidden="true">🔍</div>
-
           <h3 class="text-lg font-extrabold text-sage-900">ما لقينا نتائج مطابقة</h3>
-
-          <p class="mt-2 text-sm text-sand-800">جرّب كلمة ثانية أو ارجع للمساحتين.</p>
-
-          <button
-            id="resetSearch"
-            type="button"
-            class="mt-4 rounded-full bg-sage-700 px-5 py-2 text-white font-bold">
-            مسح البحث
-          </button>
+          <p class="mt-2 text-sm text-sand-800">جرّب كلمة ثانية أو اختار فئة مختلفة.</p>
+          <button id="resetSearch" type="button" class="mt-4 rounded-full bg-sage-700 px-5 py-2 text-white font-bold">عرض كل المواد</button>
         </div>
       </section>
     </main>
@@ -348,10 +260,8 @@
     <section class="mb-10 rounded-4xl border border-sand-200 bg-white/80 p-6 sm:p-8">
       <div class="flex items-start gap-4">
         <div class="shrink-0 w-12 h-12 rounded-2xl bg-sage-100 flex items-center justify-center text-2xl">🔒</div>
-
         <div>
           <h2 class="text-lg font-extrabold text-sage-900">خصوصيتك مهمة</h2>
-
           <p class="mt-2 text-sm text-sand-800 leading-relaxed">
             الأدوات الرقمية وسيلة مساندة وتوعوية، ولا تُغني عن التواصل المباشر مع المرشد التربوي عند الحاجة. تختلف طريقة التعامل مع المعلومات من أداة لأخرى؛ لذلك لا تُدخل معلومات شديدة الحساسية إلا بعد فهم طريقة عمل الأداة وما توضحه بشأن الخصوصية.
           </p>
@@ -359,31 +269,21 @@
       </div>
     </section>
 
-    <!-- التذييل -->
     <footer class="border-t border-sand-200 py-7 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-right text-xs text-sand-800">
       <div>
         <strong class="text-sage-900">مدرسة ابن عباس الثانوية للبنين</strong>
         <span> — بوابة المرشد الرقمي</span>
       </div>
-
-      <div>
-        المرشد التربوي:
-        <strong class="text-sage-900">وصفي الطعيمات</strong>
-        — قسم الإرشاد، لواء الجامعة
-      </div>
+      <div>المرشد التربوي: <strong class="text-sage-900">وصفي الطعيمات</strong> — قسم الإرشاد، لواء الجامعة</div>
     </footer>
-
   </div>
 
   <script>
     /*
-      قائمة الأدوات والمواد.
-      category:
-      student = الطلاب
-      parent  = ولي الأمر
-      library = تصنيف داخلي للمادة، وليس زرًا ظاهرًا في الواجهة.
+      قائمة الروابط:
+      أضف أي مادة جديدة داخل القائمة بنفس التنسيق.
+      category تقبل: student أو parent أو library أو أكثر من فئة.
     */
-
     const resources = [
       {
         title: "تواصل مع المرشد",
@@ -449,7 +349,7 @@
         title: "لماذا أشعر بالضيق والتوتر؟",
         description: "مادة إرشادية عن الضيق والتوتر، تتضمن محتوى يساعد على فهم المشاعر.",
         category: ["student", "library"],
-        label: "مادة إرشادية",
+        label: "مكتبة إرشادية",
         icon: "🌦️",
         action: "اقرأ المادة",
         url: "https://sites.google.com/view/orcalus/لماذا-اشعر-بالضيق-والتوتر",
@@ -509,7 +409,7 @@
         title: "دليل التربية الواعية للمراهقين",
         description: "مادة إرشادية مساندة للأسرة لفهم مرحلة المراهقة والتعامل مع الأبناء.",
         category: ["parent", "library"],
-        label: "مادة إرشادية",
+        label: "مكتبة إرشادية",
         icon: "🌱",
         action: "افتح الدليل",
         url: "https://sites.google.com/view/orcalus/دليل-التربية-الواعية-للمراهقين",
@@ -519,7 +419,7 @@
         title: "التعامل مع قلق الاختبار",
         description: "إرشادات عملية لمساندة الأبناء والتعامل مع القلق قبل الاختبارات.",
         category: ["parent", "library"],
-        label: "مادة إرشادية",
+        label: "مكتبة إرشادية",
         icon: "📝",
         action: "افتح المادة",
         url: "https://sites.google.com/view/orcalus/التعامل-مع-قلق-الاختبار",
@@ -529,7 +429,7 @@
         title: "تأثير قلة النوم على المراهقين",
         description: "مادة توعوية عن النوم لدى المراهقين وعلاقته بالتركيز والتوازن الرقمي.",
         category: ["parent", "library"],
-        label: "مادة إرشادية",
+        label: "مكتبة إرشادية",
         icon: "🌙",
         action: "افتح المادة",
         url: "https://sites.google.com/view/orcalus/تاثير-قلة-النوم-على-المراهقين",
@@ -539,56 +439,19 @@
 
     const grid = document.getElementById("cardsGrid");
     const searchInput = document.getElementById("searchInput");
-    const spaceButtons = [...document.querySelectorAll("[data-space]")];
-    const spaceCards = document.getElementById("spaceCards");
-    const selectedSpaceBar = document.getElementById("selectedSpaceBar");
-    const selectedSpaceTitle = document.getElementById("selectedSpaceTitle");
-    const backToSpaces = document.getElementById("backToSpaces");
+    const filterButtons = [...document.querySelectorAll(".filter-btn")];
     const emptyMessage = document.getElementById("emptyMessage");
     const resultCount = document.getElementById("resultCount");
-
-    let activeFilter = null;
-
-    function chooseSpace(space) {
-      activeFilter = space;
-
-      spaceCards.classList.add("hidden");
-      selectedSpaceBar.classList.remove("hidden");
-      selectedSpaceBar.classList.add("flex");
-      grid.classList.remove("hidden");
-
-      selectedSpaceTitle.textContent =
-        space === "student" ? "مساحة الطلاب" : "مساحة ولي الأمر";
-
-      searchInput.value = "";
-      renderCards();
-    }
-
-    function returnToSpaces() {
-      activeFilter = null;
-
-      spaceCards.classList.remove("hidden");
-      selectedSpaceBar.classList.add("hidden");
-      selectedSpaceBar.classList.remove("flex");
-      grid.classList.add("hidden");
-
-      searchInput.value = "";
-      resultCount.textContent = "";
-      emptyMessage.classList.add("hidden");
-    }
+    let activeFilter = "all";
 
     function createCard(item) {
       const card = document.createElement("a");
-
       card.href = item.url;
       card.target = "_blank";
       card.rel = "noopener noreferrer";
       card.className = "organic-card rounded-4xl p-6 flex flex-col min-h-64";
-
       card.dataset.category = item.category.join(" ");
-      card.dataset.search = (
-        item.title + " " + item.description + " " + item.keywords
-      ).toLocaleLowerCase("ar");
+      card.dataset.search = (item.title + " " + item.description + " " + item.keywords).toLocaleLowerCase("ar");
 
       const top = document.createElement("div");
       top.className = "flex items-start justify-between gap-3 mb-5";
@@ -600,7 +463,6 @@
       const label = document.createElement("span");
       label.className = "rounded-full bg-sand-100 px-3 py-2 text-xs font-bold text-sage-800";
       label.textContent = item.label;
-
       top.append(icon, label);
 
       const title = document.createElement("h3");
@@ -620,27 +482,20 @@
       const arrow = document.createElement("span");
       arrow.textContent = "←";
       arrow.setAttribute("aria-hidden", "true");
-
       bottom.append(action, arrow);
-      card.append(top, title, description, bottom);
 
+      card.append(top, title, description, bottom);
       return card;
     }
 
     function renderCards() {
       const query = searchInput.value.trim().toLocaleLowerCase("ar");
       let count = 0;
-
       grid.replaceChildren();
 
       resources.forEach(item => {
-        const text = (
-          item.title + " " + item.description + " " + item.keywords
-        ).toLocaleLowerCase("ar");
-
-        const matchesCategory =
-          activeFilter === null || item.category.includes(activeFilter);
-
+        const text = (item.title + " " + item.description + " " + item.keywords).toLocaleLowerCase("ar");
+        const matchesCategory = activeFilter === "all" || item.category.includes(activeFilter);
         const matchesSearch = !query || text.includes(query);
 
         if (matchesCategory && matchesSearch) {
@@ -653,40 +508,33 @@
       resultCount.textContent = "عدد المواد الظاهرة: " + count;
     }
 
-    spaceButtons.forEach(button => {
+    searchInput.addEventListener("input", renderCards);
+
+    filterButtons.forEach(button => {
       button.addEventListener("click", () => {
-        chooseSpace(button.dataset.space);
+        activeFilter = button.dataset.filter;
+
+        filterButtons.forEach(btn => {
+          btn.setAttribute("aria-pressed", String(btn === button));
+        });
+
+        renderCards();
       });
-    });
-
-    backToSpaces.addEventListener("click", returnToSpaces);
-
-    searchInput.addEventListener("input", () => {
-      if (activeFilter === null && searchInput.value.trim()) {
-        spaceCards.classList.add("hidden");
-        selectedSpaceBar.classList.remove("hidden");
-        selectedSpaceBar.classList.add("flex");
-        grid.classList.remove("hidden");
-        selectedSpaceTitle.textContent = "نتائج البحث";
-      } else if (activeFilter === null && !searchInput.value.trim()) {
-        returnToSpaces();
-        return;
-      }
-
-      renderCards();
     });
 
     document.getElementById("resetSearch").addEventListener("click", () => {
       searchInput.value = "";
+      activeFilter = "all";
 
-      if (activeFilter === null) {
-        returnToSpaces();
-      } else {
-        renderCards();
-      }
+      filterButtons.forEach(btn => {
+        btn.setAttribute("aria-pressed", String(btn.dataset.filter === "all"));
+      });
 
+      renderCards();
       searchInput.focus();
     });
+
+    renderCards();
   </script>
 </body>
 </html>
