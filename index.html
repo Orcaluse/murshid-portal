@@ -604,19 +604,19 @@
     renderCards();
   });
 });
-    document.getElementById("resetSearch").addEventListener("click", () => {
-      searchInput.value = "";
-      activeFilter = "all";
+document.getElementById("resetSearch").addEventListener("click", () => {
+  searchInput.value = "";
+  activeFilter = "all";
 
-      filterButtons.forEach(btn => {
-        btn.setAttribute("aria-pressed", String(btn.dataset.filter === "all"));
-      });
+  filterButtons.forEach(btn => {
+    btn.setAttribute("aria-pressed", "false");
+  });
 
-      renderCards();
-      searchInput.focus();
-    });
+  renderCards();
+  searchInput.focus();
+});
 
-    renderCards();
+renderCards();
   </script>
 </body>
 </html>
