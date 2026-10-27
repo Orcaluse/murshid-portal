@@ -615,15 +615,7 @@ let activeFilter = "none";
     renderCards();
   });
 });
-    searchInput.value = "";
-activeFilter = "none";
-  filterButtons.forEach(btn => {
-    btn.setAttribute("aria-pressed", "false");
-  });
-
-  renderCards();
-  searchInput.focus();
-});
+  
 
 renderCards();
   </script>
