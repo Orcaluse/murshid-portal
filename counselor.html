@@ -1,1 +1,461 @@
 
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FBF8F3">
+  <meta name="description" content="تعرّف إلى المرشد التربوي وأهداف الإرشاد والسرية والخصوصية في مدرسة ابن عباس الثانوية للبنين.">
+  <title>تعرّف إلى المرشد التربوي | بوابة المرشد الرقمي</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              50:'#F4F7F5',100:'#E8F1EC',200:'#CDE1D6',
+              600:'#4A7A67',700:'#3A6A58',800:'#2C5244',900:'#1E382F'
+            },
+            sand: {
+              50:'#FBF8F3',100:'#F5EFE6',200:'#EADFCF',
+              800:'#4A4238',900:'#2E2720'
+            },
+            berry:{600:'#7E3043',700:'#642333'}
+          },
+          fontFamily:{sans:['Tajawal','sans-serif']},
+          borderRadius:{'4xl':'2rem','5xl':'2.5rem'}
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: #FBF8F3;
+      color: #2E2720;
+      overflow-x: hidden;
+    }
+
+    .blob {
+      position: absolute;
+      z-index: -1;
+      pointer-events: none;
+      filter: blur(55px);
+      border-radius: 50%;
+      opacity: .55;
+    }
+
+    .blob-one {
+      top: -100px;
+      right: -120px;
+      width: 420px;
+      height: 420px;
+      background: #CDE1D6;
+    }
+
+    .blob-two {
+      top: 950px;
+      left: -180px;
+      width: 450px;
+      height: 450px;
+      background: #EADFCF;
+    }
+
+    .organic-card {
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(234,223,207,.85);
+      box-shadow: 0 10px 30px -15px rgba(58,106,88,.18);
+    }
+
+    .section-card {
+      transition: box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .section-card:hover {
+      border-color: rgba(58,106,88,.35);
+      box-shadow: 0 15px 35px -20px rgba(58,106,88,.3);
+    }
+
+    a:focus-visible {
+      outline: 3px solid rgba(74,122,103,.55);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      right: 12px;
+      z-index: 100;
+      padding: 12px;
+      color: white;
+      background: #1E382F;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .content-copy {
+      font-size: 1rem;
+      line-height: 2;
+      color: #4A4238;
+    }
+
+    .content-copy p + p {
+      margin-top: 1rem;
+    }
+
+    .content-copy ul {
+      list-style: disc;
+      padding-right: 1.5rem;
+      margin-top: .75rem;
+    }
+
+    .content-copy li {
+      padding-right: .25rem;
+      margin-top: .6rem;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen relative">
+  <a class="skip-link rounded-xl" href="#main">انتقل إلى المحتوى</a>
+
+  <div class="blob blob-one" aria-hidden="true"></div>
+  <div class="blob blob-two" aria-hidden="true"></div>
+
+  <div class="max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- رأس الصفحة -->
+    <header class="py-5 sm:py-7 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-sand-200/80">
+      <a href="index.html" class="flex items-center gap-3 no-underline">
+        <div class="w-12 h-12 rounded-2xl bg-sage-700 text-white flex items-center justify-center text-2xl shadow-lg" aria-hidden="true">🌿</div>
+        <div>
+          <span class="block text-xl font-extrabold text-sage-900">بوابة المرشد الرقمي</span>
+          <span class="block text-xs text-sand-800">مدرسة ابن عباس الثانوية للبنين</span>
+        </div>
+      </a>
+
+      <a
+        href="index.html"
+        class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full bg-sage-700 hover:bg-sage-800 text-white font-bold shadow-md transition"
+      >
+        <span aria-hidden="true">→</span>
+        العودة إلى البوابة
+      </a>
+    </header>
+
+    <main id="main">
+
+      <!-- المقدمة -->
+      <section class="py-12 sm:py-16 text-center">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-100 text-sage-800 text-sm font-bold border border-sage-200">
+          🧭 الإرشاد التربوي
+        </span>
+
+        <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-black text-sage-900 leading-tight">
+          تعرّف إلى المرشد التربوي
+        </h1>
+
+        <p class="mt-4 text-xl sm:text-2xl font-extrabold text-sage-700">
+          شريك في نمو الطالب ونجاحه
+        </p>
+
+        <div class="organic-card rounded-4xl p-6 sm:p-9 mt-8 text-right">
+          <p class="content-copy">
+            المرشد التربوي مختص يعمل في البيئة المدرسية لمساندة الطلبة في مسيرتهم التعليمية والنمائية، ومساعدتهم على فهم ذواتهم وقدراتهم، وتنمية مهاراتهم، والتعامل مع الصعوبات التي قد تواجههم. ويعمل بالتعاون مع الأسرة والمعلمين وإدارة المدرسة بما يخدم مصلحة الطالب ويدعم تقدّمه.
+          </p>
+        </div>
+      </section>
+
+      <!-- أهداف عمل المرشد -->
+      <section class="mb-12">
+        <div class="mb-6">
+          <span class="text-sm font-bold text-sage-700">أهداف العمل الإرشادي</span>
+          <h2 class="mt-2 text-3xl sm:text-4xl font-black text-sage-900">
+            ما أهداف عمل المرشد التربوي؟
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+          <!-- الخدمات الوقائية -->
+          <article class="organic-card section-card rounded-4xl p-6 sm:p-8">
+            <div class="flex items-start gap-4">
+              <div class="shrink-0 w-14 h-14 rounded-2xl bg-sage-100 flex items-center justify-center text-3xl" aria-hidden="true">🛡️</div>
+              <div>
+                <h3 class="text-2xl font-black text-sage-900">أولًا: الخدمات الوقائية</h3>
+                <p class="mt-2 text-lg font-extrabold text-sage-700">الوقاية قبل تفاقم المشكلة</p>
+              </div>
+            </div>
+
+            <div class="content-copy mt-5">
+              <p>
+                تهدف إلى تعزيز الوعي والمهارات التي تساعد الطلبة على تجنّب المشكلات والحد من عوامل الخطورة، والتعرّف المبكر إلى الصعوبات التي قد تؤثر في تعلمهم أو توافقهم المدرسي.
+              </p>
+
+              <p class="font-extrabold text-sage-900">ومن أمثلتها:</p>
+              <ul>
+                <li>التوعية بالتنمّر والعنف والمخدرات والمؤثرات العقلية.</li>
+                <li>تعزيز السلوك الإيجابي.</li>
+                <li>التوعية بطرق التعامل مع الضغوط وطلب المساعدة.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- الدور النمائي -->
+          <article class="organic-card section-card rounded-4xl p-6 sm:p-8">
+            <div class="flex items-start gap-4">
+              <div class="shrink-0 w-14 h-14 rounded-2xl bg-sand-100 flex items-center justify-center text-3xl" aria-hidden="true">🌱</div>
+              <div>
+                <h3 class="text-2xl font-black text-sage-900">ثانيًا: الدور النمائي</h3>
+                <p class="mt-2 text-lg font-extrabold text-sage-700">تنمية القدرات وبناء الإمكانات</p>
+              </div>
+            </div>
+
+            <div class="content-copy mt-5">
+              <p>
+                يهدف إلى مساعدة الطلبة على اكتشاف قدراتهم وميولهم، وتنمية مهاراتهم الشخصية والاجتماعية والدراسية والمهنية، وتعزيز قدرتهم على اتخاذ القرارات والتخطيط لمستقبلهم.
+              </p>
+
+              <p class="font-extrabold text-sage-900">ومن أمثلته:</p>
+              <ul>
+                <li>اكتشاف الميول المهنية.</li>
+                <li>تنظيم الوقت والدراسة.</li>
+                <li>تنمية مهارات التواصل وحل المشكلات.</li>
+                <li>الاستعداد للمرحلة التعليمية والمهنية القادمة.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- الخدمات العلاجية -->
+          <article class="organic-card section-card rounded-4xl p-6 sm:p-8 md:col-span-2">
+            <div class="flex items-start gap-4">
+              <div class="shrink-0 w-14 h-14 rounded-2xl bg-sage-100 flex items-center justify-center text-3xl" aria-hidden="true">🤝</div>
+              <div>
+                <h3 class="text-2xl font-black text-sage-900">ثالثًا: الخدمات العلاجية</h3>
+                <p class="mt-2 text-lg font-extrabold text-sage-700">مساندة الطالب عند مواجهة الصعوبات</p>
+              </div>
+            </div>
+
+            <div class="content-copy mt-5">
+              <p>
+                تهدف إلى التعامل الإرشادي مع المشكلات القائمة التي تؤثر في الطالب أو مسيرته المدرسية، من خلال فهم احتياجاته، وتقديم المساندة المناسبة، ومتابعة الحالة بالتعاون مع الأطراف المعنية وفق الإجراءات المعتمدة.
+              </p>
+
+              <p class="font-extrabold text-sage-900">ومن أمثلتها:</p>
+              <ul>
+                <li>متابعة حالات الغياب المتكرر المحالة من الإدارة المدرسية.</li>
+                <li>مساندة الطلبة الذين يواجهون صعوبات دراسية أو اجتماعية أو سلوكية.</li>
+                <li>التعامل مع حالات التنمّر والعنف وفق إجراءات الحماية المعتمدة.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- السرية والخصوصية -->
+      <section class="mb-12">
+        <div class="organic-card rounded-4xl p-6 sm:p-9">
+          <div class="flex items-start gap-4">
+            <div class="shrink-0 w-14 h-14 rounded-2xl bg-sage-100 flex items-center justify-center text-3xl" aria-hidden="true">🔒</div>
+            <div>
+              <span class="text-sm font-bold text-sage-700">الثقة والمسؤولية المهنية</span>
+              <h2 class="mt-2 text-3xl font-black text-sage-900">
+                السرية والخصوصية في الإرشاد التربوي
+              </h2>
+            </div>
+          </div>
+
+          <div class="content-copy mt-6">
+            <p>
+              تُعدّ <strong class="text-sage-900">السرية واحترام خصوصية الطالب</strong> من الأسس المهمة في العلاقة الإرشادية؛ إذ يحتاج الطالب إلى الشعور بالأمان والثقة حتى يتمكّن من التعبير عن أفكاره ومشاعره والصعوبات التي يواجهها دون خوف من السخرية أو الإحراج.
+            </p>
+
+            <p>
+              يتعامل المرشد التربوي مع المعلومات التي يشاركها الطالب بمسؤولية ومهنية، ويحافظ على خصوصيتها، ويقتصر توثيق المعلومات وتداولها على ما تقتضيه الحاجة المهنية ووفق الإجراءات والتعليمات المعمول بها.
+            </p>
+
+            <div class="mt-6 rounded-2xl border border-sand-200 bg-sand-50 p-5 sm:p-6">
+              <h3 class="text-xl font-black text-sage-900">
+                والسرية لا تعني وعد الطالب بكتمان كل شيء مهما كانت الظروف.
+              </h3>
+              <p class="mt-3">
+                فإذا ظهرت مؤشرات تتعلق بسلامة الطالب أو سلامة الآخرين، فيجب التعامل مع الحالة بمسؤولية وفق إجراءات الحماية والتعليمات الرسمية المعتمدة، مع مراعاة خصوصية الطالب وعدم تداول تفاصيل حالته مع غير المعنيين.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ماذا تعني السرية؟ -->
+      <section class="mb-12">
+        <div class="mb-5">
+          <span class="text-sm font-bold text-sage-700">للطلاب وأولياء الأمور</span>
+          <h2 class="mt-2 text-3xl font-black text-sage-900">
+            ماذا تعني السرية للطالب وولي الأمر؟
+          </h2>
+        </div>
+
+        <div class="organic-card rounded-4xl p-6 sm:p-8">
+          <ul class="content-copy list-none !pr-0">
+            <li class="flex items-start gap-3">
+              <span class="text-sage-700 font-black" aria-hidden="true">✓</span>
+              <span>أن الحديث مع المرشد يتم في إطار مهني يحترم خصوصية الطالب.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-sage-700 font-black" aria-hidden="true">✓</span>
+              <span>أن المعلومات لا تُتداول لمجرد الفضول أو على نحو يعرّض الطالب للإحراج أو الوصم.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-sage-700 font-black" aria-hidden="true">✓</span>
+              <span>أن توثيق الحالات ومتابعتها يتم بمسؤولية، وبالقدر الذي تتطلبه الحاجة المهنية.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-sage-700 font-black" aria-hidden="true">✓</span>
+              <span>أن الحالات التي تستدعي إجراءات لحماية الطالب أو الآخرين تُعالَج وفق التعليمات والإجراءات المعتمدة، دون تقديم وعود بسرية مطلقة.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- استفادة الطالب والأسرة -->
+      <section class="mb-12">
+        <div class="organic-card rounded-4xl p-6 sm:p-9">
+          <div class="flex items-start gap-4">
+            <div class="shrink-0 w-14 h-14 rounded-2xl bg-sand-100 flex items-center justify-center text-3xl" aria-hidden="true">👨‍👩‍👦</div>
+            <div>
+              <h2 class="text-3xl font-black text-sage-900">
+                كيف يستفيد الطالب والأسرة من الإرشاد؟
+              </h2>
+            </div>
+          </div>
+
+          <div class="content-copy mt-5">
+            <p>
+              يمكن للطالب طلب المساندة عندما يواجه صعوبة في الدراسة أو علاقاته أو التكيّف المدرسي، أو عندما يحتاج إلى فهم قدراته وميوله والتخطيط لمستقبله. ويمكن لولي الأمر التواصل مع المرشد للتشاور حول احتياجات ابنه وسبل دعمه تربويًا.
+            </p>
+
+            <p>
+              ويشمل العمل الإرشادي خدمات فردية وجمعية، وأنشطة توجيهية ومهنية، ولقاءات توعوية، وتعاونًا مع الأسرة والمدرسة وفق طبيعة الحاجة والمهام المعتمدة.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- العمل المهني -->
+      <section class="mb-12">
+        <div class="organic-card rounded-4xl p-6 sm:p-9">
+          <div class="flex items-start gap-4">
+            <div class="shrink-0 w-14 h-14 rounded-2xl bg-sage-100 flex items-center justify-center text-3xl" aria-hidden="true">⚖️</div>
+            <div>
+              <h2 class="text-3xl font-black text-sage-900">
+                الإرشاد التربوي عمل مهني ومسؤولية مشتركة
+              </h2>
+            </div>
+          </div>
+
+          <div class="content-copy mt-5">
+            <p>
+              يقوم الإرشاد على التعاون واحترام الطالب ومراعاة خصوصيته، وتوثيق العمل وفق الأصول المهنية والتعليمات المعتمدة. وهو ليس وسيلة للعقاب أو إصدار الأحكام، ولا يقدم حلولًا جاهزة بدلًا من الطالب؛ بل يساعده على فهم الموقف وتنمية قدرته على اتخاذ قرارات مناسبة.
+            </p>
+
+            <p>
+              وتبقى الأدوات والمواد المتاحة عبر بوابة المرشد الرقمي وسائل مساندة للتوعية والتعلّم، ولا تحل محل التواصل الإرشادي المباشر عندما تستدعي الحاجة ذلك.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- دور الأسرة -->
+      <section class="mb-12">
+        <div class="organic-card rounded-4xl p-6 sm:p-9">
+          <div class="flex items-start gap-4">
+            <div class="shrink-0 w-14 h-14 rounded-2xl bg-sand-100 flex items-center justify-center text-3xl" aria-hidden="true">🏡</div>
+            <div>
+              <h2 class="text-3xl font-black text-sage-900">
+                دور الأسرة في دعم العلاقة الإرشادية
+              </h2>
+            </div>
+          </div>
+
+          <div class="content-copy mt-5">
+            <p>
+              يسهم تعاون الأسرة مع المرشد التربوي في فهم احتياجات الطالب ومساندته. ويقوم هذا التعاون على الاحترام والمسؤولية، ومراعاة خصوصية الطالب، وتبادل المعلومات ذات الصلة بالحالة بالقدر المناسب ووفق الإجراءات المعمول بها.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- رسالة للطالب -->
+      <section class="mb-12">
+        <div class="rounded-4xl bg-sage-900 text-white p-7 sm:p-10 shadow-lg">
+          <div class="text-4xl" aria-hidden="true">💚</div>
+          <h2 class="mt-4 text-2xl sm:text-3xl font-black">
+            رسالة للطالب
+          </h2>
+          <p class="mt-4 text-lg sm:text-xl leading-loose">
+            مش كل مشكلة لازم تواجهها لحالك. المرشد موجود ليساعدك تفهم الموقف وتبحث عن خطوات مناسبة، ضمن علاقة مهنية تحترم خصوصيتك وسلامتك.
+          </p>
+        </div>
+      </section>
+
+      <!-- التواصل -->
+      <section class="organic-card rounded-4xl p-6 sm:p-8 mb-12 text-center">
+        <h2 class="text-2xl sm:text-3xl font-black text-sage-900">
+          تحتاج إلى التواصل مع المرشد؟
+        </h2>
+        <p class="mt-3 text-base text-sand-800 leading-relaxed">
+          يمكنك استخدام قناة التواصل في بوابة المرشد الرقمي، أو مراجعة المرشد في المدرسة وفق الإجراءات المتبعة.
+        </p>
+
+        <a
+          href="https://script.google.com/macros/s/AKfycbzt_1W-sluRF6LYKVmkgW7H7Bfn-vdPM0IoN80uhu29s9Y2OcIhsgAY7t5tMLrIA9C5Mg/exec"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-5 inline-flex justify-center items-center gap-2 rounded-full bg-sage-700 hover:bg-sage-800 px-6 py-3 text-white font-bold shadow-md transition"
+        >
+          💬 تواصل مع المرشد
+          <span aria-hidden="true">←</span>
+        </a>
+      </section>
+
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer class="border-t border-sand-200 py-7 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-right text-xs text-sand-800">
+      <div>
+        <strong class="text-sage-900">بوابة المرشد الرقمي — مدرسة ابن عباس الثانوية للبنين</strong>
+      </div>
+      <div>
+        المرشد التربوي: <strong class="text-sage-900">وصفي الطعيمات</strong>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
