@@ -318,7 +318,10 @@
     </span>
   </a>
 </div>
-      </section>
+
+<p id="resultCount" class="mt-4 text-xs text-sand-800" aria-live="polite"></p>
+
+</section>
 
       <!-- البطاقات تُنشأ تلقائيًا من قائمة الروابط أدناه -->
       <section aria-label="الأدوات والمواد الإرشادية" class="mb-12">
@@ -564,26 +567,35 @@ let activeFilter = "none";
       return card;
     }
 
-    function renderCards() {
-      const query = searchInput.value.trim().toLocaleLowerCase("ar");
-      let count = 0;
-      grid.replaceChildren();
+   function renderCards() {
+  const query = searchInput.value.trim().toLocaleLowerCase("ar");
+  let count = 0;
+  grid.replaceChildren();
 
-      resources.forEach(item => {
-        const text = (item.title + " " + item.description + " " + item.keywords).toLocaleLowerCase("ar");
-        const matchesCategory = activeFilter === "all" || item.category.includes(activeFilter);
-        const matchesSearch = !query || text.includes(query);
+  resources.forEach(item => {
+    const text = (item.title + " " + item.description + " " + item.keywords).toLocaleLowerCase("ar");
 
-        if (matchesCategory && matchesSearch) {
-          grid.appendChild(createCard(item));
-          count++;
-        }
-      });
+    const matchesCategory =
+      (activeFilter === "all" || activeFilter === "none" || item.category.includes(activeFilter));
 
-      emptyMessage.classList.toggle("hidden", count !== 0);
-      resultCount.textContent = "عدد المواد الظاهرة: " + count;
+    const matchesSearch = !query || text.includes(query);
+
+    if (activeFilter !== "none" && matchesCategory && matchesSearch) {
+      grid.appendChild(createCard(item));
+      count++;
     }
+  });
 
+  emptyMessage.classList.toggle(
+    "hidden",
+    activeFilter === "none" || count !== 0
+  );
+
+  resultCount.textContent =
+    activeFilter === "none"
+      ? ""
+      : "عدد المواد الظاهرة: " + count;
+}
     searchInput.addEventListener("input", renderCards);
 
   filterButtons.forEach(button => {
@@ -591,7 +603,7 @@ let activeFilter = "none";
     const selectedFilter = button.dataset.filter;
 
     activeFilter =
-      activeFilter === selectedFilter ? "all" : selectedFilter;
+      activeFilter === selectedFilter ? "none" : selectedFilter;
 
     filterButtons.forEach(btn => {
       btn.setAttribute(
@@ -603,8 +615,7 @@ let activeFilter = "none";
     renderCards();
   });
 });
-document.getElementById("resetSearch").addEventListener("click", () => {
-  searchInput.value = "";
+    searchInput.value = "";
   activeFilter = "all";
 
   filterButtons.forEach(btn => {
