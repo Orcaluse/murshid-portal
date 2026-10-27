@@ -325,6 +325,7 @@
 
       <!-- البطاقات تُنشأ تلقائيًا من قائمة الروابط أدناه -->
       <section aria-label="الأدوات والمواد الإرشادية" class="mb-12">
+        <h2 id="sectionTitle" class="hidden mb-5 text-2xl font-black text-sage-900"></h2>
         <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
 
         <div id="emptyMessage" class="hidden py-14 text-center">
@@ -571,7 +572,7 @@ let activeFilter = "none";
   const query = searchInput.value.trim().toLocaleLowerCase("ar");
   let count = 0;
   grid.replaceChildren();
-
+const sectionTitle = document.getElementById("sectionTitle");
   resources.forEach(item => {
     const text = (item.title + " " + item.description + " " + item.keywords).toLocaleLowerCase("ar");
 
@@ -596,9 +597,10 @@ let activeFilter = "none";
       ? ""
       : "عدد المواد الظاهرة: " + count;
 }
-    searchInput.addEventListener("input", renderCards);
+     
+searchInput.addEventListener("input", renderCards);
 
-  filterButtons.forEach(button => {
+filterButtons.forEach(button => {
   button.addEventListener("click", () => {
     const selectedFilter = button.dataset.filter;
 
@@ -612,12 +614,27 @@ let activeFilter = "none";
       );
     });
 
+    const sectionTitle = document.getElementById("sectionTitle");
+
+    if (activeFilter === "student") {
+      sectionTitle.textContent = "🎓 أدوات الطالب";
+      sectionTitle.classList.remove("hidden");
+    } else if (activeFilter === "parent") {
+      sectionTitle.textContent = "👨‍👩‍👦 مواد ولي الأمر";
+      sectionTitle.classList.remove("hidden");
+    } else {
+      sectionTitle.classList.add("hidden");
+    }
+
     renderCards();
+
+    if (activeFilter !== "none") {
+      sectionTitle.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
   });
 });
-  
 
 renderCards();
-  </script>
-</body>
-</html>
