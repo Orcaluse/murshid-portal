@@ -587,18 +587,23 @@
 
     searchInput.addEventListener("input", renderCards);
 
-    filterButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        activeFilter = button.dataset.filter;
+  filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const selectedFilter = button.dataset.filter;
 
-        filterButtons.forEach(btn => {
-          btn.setAttribute("aria-pressed", String(btn === button));
-        });
+    activeFilter =
+      activeFilter === selectedFilter ? "all" : selectedFilter;
 
-        renderCards();
-      });
+    filterButtons.forEach(btn => {
+      btn.setAttribute(
+        "aria-pressed",
+        String(btn.dataset.filter === activeFilter)
+      );
     });
 
+    renderCards();
+  });
+});
     document.getElementById("resetSearch").addEventListener("click", () => {
       searchInput.value = "";
       activeFilter = "all";
