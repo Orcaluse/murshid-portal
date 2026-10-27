@@ -1,516 +1,74 @@
-
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GJPNWC84T9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-GJPNWC84T9');
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#FBF8F3">
-  <meta name="description" content="بوابة المرشد الرقمي في مدرسة ابن عباس الثانوية للبنين؛ أدوات ومواد إرشادية للطلاب وأولياء الأمور.">
-  <title>بوابة المرشد الرقمي | مدرسة ابن عباس الثانوية للبنين</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            sage: {
-              50:'#F4F7F5',100:'#E8F1EC',200:'#CDE1D6',
-              600:'#4A7A67',700:'#3A6A58',800:'#2C5244',900:'#1E382F'
-            },
-            sand: {
-              50:'#FBF8F3',100:'#F5EFE6',200:'#EADFCF',
-              800:'#4A4238',900:'#2E2720'
-            },
-            berry:{600:'#7E3043',700:'#642333'}
-          },
-          fontFamily:{sans:['Tajawal','sans-serif']},
-          borderRadius:{'4xl':'2rem','5xl':'2.5rem'}
-        }
-      }
-    }
-  </script>
-
-  <style>
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body {
-      font-family:'Tajawal',sans-serif;
-      background:#FBF8F3;
-      color:#2E2720;
-      overflow-x:hidden;
-    }
-    .blob {
-      position:absolute;
-      z-index:-1;
-      pointer-events:none;
-      filter:blur(55px);
-      border-radius:50%;
-      opacity:.7;
-    }
-    .blob-one {
-      top:-100px;right:-120px;width:420px;height:420px;
-      background:#CDE1D6;
-    }
-    .blob-two {
-      top:700px;left:-180px;width:450px;height:450px;
-      background:#EADFCF;
-    }
-    .organic-card {
-      background:rgba(255,255,255,.88);
-      backdrop-filter:blur(12px);
-      border:1px solid rgba(234,223,207,.8);
-      box-shadow:0 10px 30px -15px rgba(58,106,88,.18);
-      transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
-    }
-    .organic-card:hover {
-      transform:translateY(-5px);
-      border-color:rgba(58,106,88,.4);
-      box-shadow:0 18px 38px -18px rgba(58,106,88,.3);
-    }
-    .filter-btn { transition:all .2s ease; }
-    .filter-btn[aria-pressed="true"] {
-      background:#3A6A58;
-      color:white;
-      border-color:#3A6A58;
-      box-shadow:0 5px 14px rgba(58,106,88,.18);
-    }
-    input:focus-visible,button:focus-visible,a:focus-visible {
-      outline:3px solid rgba(74,122,103,.45);
-      outline-offset:3px;
-    }
-    .skip-link {
-      position:absolute;top:-100px;right:12px;
-      background:#1E382F;color:white;padding:12px;z-index:100;
-    }
-    .skip-link:focus { top:12px; }
-    @media (prefers-reduced-motion:reduce) {
-      *,*::before,*::after {
-        scroll-behavior:auto!important;
-        animation-duration:.01ms!important;
-        transition-duration:.01ms!important;
-      }
-    }
-/* الصورة الرئيسية */
-.hero-art {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  min-height: 0;
-  border: 0;
-  border-radius: 28px;
-  background: transparent;
-  box-shadow: none;
-}
-
-.hero-art::before,
-.hero-art::after {
-  display: none;
-}
-
-.hero-illustration {
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: auto;
-  margin: 0;
-  border-radius: 28px;
-  object-fit: cover;
-}
-
-.art-caption {
-  display: none;
-}
-
-@media (max-width: 640px) {
-  .hero-art {
-    min-height: 0;
-    border-radius: 22px;
-  }
-
-  .hero-illustration {
-    width: 100%;
-    height: auto;
-    border-radius: 22px;
-  }
-}  </style>
-</head>
-
-<body class="min-h-screen relative">
-  <a class="skip-link rounded-xl" href="#main">انتقل إلى المحتوى</a>
-  <div class="blob blob-one" aria-hidden="true"></div>
-  <div class="blob blob-two" aria-hidden="true"></div>
-
-  <div class="max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- رأس الصفحة -->
-    <header class="py-5 sm:py-7 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-sand-200/80">
-      <a href="#" class="flex items-center gap-3 no-underline">
-        <div class="w-12 h-12 rounded-2xl bg-sage-700 text-white flex items-center justify-center text-2xl shadow-lg">🌿</div>
-        <div>
-          <span class="block text-xl font-extrabold text-sage-900">بوابة المرشد الرقمي</span>
-          <span class="block text-xs text-sand-800">مدرسة ابن عباس الثانوية للبنين</span>
-        </div>
-      </a>
-
-      <a
-        href="https://script.google.com/macros/s/AKfycbzt_1W-sluRF6LYKVmkgW7H7Bfn-vdPM0IoN80uhu29s9Y2OcIhsgAY7t5tMLrIA9C5Mg/exec"
-        target="_blank" rel="noopener noreferrer"
-        class="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-6 py-3 rounded-full bg-sage-700 hover:bg-sage-800 text-white font-bold shadow-md transition">
-        💬 تواصل مع المرشد
-        <span aria-hidden="true">←</span>
-      </a>
-    </header>
-
-    <!-- المقدمة -->
-    <section class="py-12 sm:py-16">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-9 items-center">
-        <div class="lg:col-span-7 text-center sm:text-right">
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-sage-100 text-sage-800 text-sm font-bold border border-sage-200">
-            🌱 مساحة إرشادية رقمية
-          </span>
-
-          <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-black text-sage-900 leading-tight">
-            لأن خطوتك
-            <span class="text-sage-700">بتفرق.</span>
-          </h1>
-
-          <p class="mt-5 text-base sm:text-lg text-sand-800 leading-relaxed max-w-2xl mx-auto sm:mx-0">
-            أدوات ومواقف إرشادية تساعدك تفهم نفسك، وتتعامل مع المواقف المدرسية واليومية، وتنظّم وقتك ودراستك. ولولي الأمر، مواد عملية لمساندة الأبناء والتعامل معهم بوعي وهدوء.
-          </p>
-
-          <div class="mt-6 flex flex-wrap justify-center sm:justify-start gap-2">
-            <span class="rounded-xl border border-sand-200 bg-white/80 px-3 py-2 text-sm">🎓 للطلاب</span>
-            <span class="rounded-xl border border-sand-200 bg-white/80 px-3 py-2 text-sm">👨‍👩‍👦 لأولياء الأمور</span>
-            <span class="rounded-xl border border-sand-200 bg-white/80 px-3 py-2 text-sm">📚 مكتبة إرشادية</span>
-          </div>
-
-          <a href="#resources" class="mt-7 inline-flex items-center gap-2 rounded-full bg-sage-700 px-6 py-3 text-white font-bold hover:bg-sage-800 transition">
-            تصفّح الأدوات والمواد <span aria-hidden="true">↓</span>
-          </a>
-       
-</div>
-<div class="lg:col-span-5">
-  <div class="hero-art shadow-xl">
-    <img
-      class="hero-illustration"
-      src="assets/images/hero-guidance.png"
-      alt="طالب يستكشف خياراته المستقبلية"
-    >
-  </div>
-</div>
-
-</section>
-
-
-    <!-- البحث والتصنيفات -->
-    <main id="main">
-      <section id="resources" class="mb-7">
-        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div>
-            <h2 class="text-2xl sm:text-3xl font-black text-sage-900">اختار المساحة المناسبة إلك</h2>
-            <p class="mt-2 text-sm text-sand-800">ابحث عن موضوع، أو اختار فئة لتظهر المواد المرتبطة فيها.</p>
-          </div>
-
-          <div class="relative w-full md:w-80">
-            <label for="searchInput" class="sr-only">ابحث عن أداة أو موضوع</label>
-            <input
-              type="search" id="searchInput" autocomplete="off"
-              placeholder="ابحث عن أداة أو موضوع..."
-              class="w-full rounded-2xl border border-sand-200 bg-white py-3 pr-11 pl-4 text-sm shadow-sm">
-            <span class="absolute right-4 top-1/2 -translate-y-1/2" aria-hidden="true">🔍</span>
-          </div>
-        </div>
-
-        <div class="mt-5 flex flex-wrap gap-2" id="filterContainer" aria-label="تصفية المواد">
+# Build updated version from supplied index.html
+old = '''        <div class="mt-5 flex flex-wrap gap-2" id="filterContainer" aria-label="تصفية المواد">
           <button type="button" data-filter="all" aria-pressed="true" class="filter-btn rounded-full border border-sage-700 px-5 py-2.5 text-sm font-bold">الكل 🌟</button>
           <button type="button" data-filter="student" aria-pressed="false" class="filter-btn rounded-full border border-sand-200 bg-white px-5 py-2.5 text-sm font-bold">للطلاب 🎓</button>
           <button type="button" data-filter="parent" aria-pressed="false" class="filter-btn rounded-full border border-sand-200 bg-white px-5 py-2.5 text-sm font-bold">لولي الأمر 👨‍👩‍👦</button>
           <button type="button" data-filter="library" aria-pressed="false" class="filter-btn rounded-full border border-sand-200 bg-white px-5 py-2.5 text-sm font-bold">المكتبة الإرشادية 📚</button>
         </div>
-        <p id="resultCount" class="mt-4 text-xs text-sand-800" aria-live="polite"></p>
-      </section>
-
-      <!-- البطاقات تُنشأ تلقائيًا من قائمة الروابط أدناه -->
-      <section aria-label="الأدوات والمواد الإرشادية" class="mb-12">
-        <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
-
-        <div id="emptyMessage" class="hidden py-14 text-center">
-          <div class="text-4xl mb-3" aria-hidden="true">🔍</div>
-          <h3 class="text-lg font-extrabold text-sage-900">ما لقينا نتائج مطابقة</h3>
-          <p class="mt-2 text-sm text-sand-800">جرّب كلمة ثانية أو اختار فئة مختلفة.</p>
-          <button id="resetSearch" type="button" class="mt-4 rounded-full bg-sage-700 px-5 py-2 text-white font-bold">عرض كل المواد</button>
+        <p id="resultCount" class="mt-4 text-xs text-sand-800" aria-live="polite"></p>'''
+new = '''        <div id="spaceCards" class="mt-7 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <button type="button" data-space="student" class="organic-card group text-right rounded-4xl p-6 sm:p-8 min-h-64 sm:min-h-72 flex flex-col justify-between border border-sage-200 bg-gradient-to-br from-white to-sage-100">
+            <span class="flex items-center justify-between gap-4">
+              <span class="w-16 h-16 rounded-3xl bg-sage-700 text-white flex items-center justify-center text-3xl shadow-md" aria-hidden="true">🎓</span>
+              <span class="w-11 h-11 rounded-full bg-sage-700 text-white flex items-center justify-center text-2xl transition-transform group-hover:-translate-x-1" aria-hidden="true">←</span>
+            </span>
+            <span class="block mt-7">
+              <span class="block text-2xl sm:text-3xl font-black text-sage-900">مساحة الطلاب</span>
+              <span class="block mt-3 text-base sm:text-lg leading-relaxed text-sand-800 font-medium">أدوات ومواد إرشادية تساعدك في رحلتك الدراسية وفهم نفسك والتعامل مع المواقف اليومية.</span>
+            </span>
+          </button>
+          <button type="button" data-space="parent" class="organic-card group text-right rounded-4xl p-6 sm:p-8 min-h-64 sm:min-h-72 flex flex-col justify-between border border-sand-200 bg-gradient-to-br from-white to-sand-100">
+            <span class="flex items-center justify-between gap-4">
+              <span class="w-16 h-16 rounded-3xl bg-[#8B6A3E] text-white flex items-center justify-center text-3xl shadow-md" aria-hidden="true">👨‍👩‍👦</span>
+              <span class="w-11 h-11 rounded-full bg-[#8B6A3E] text-white flex items-center justify-center text-2xl transition-transform group-hover:-translate-x-1" aria-hidden="true">←</span>
+            </span>
+            <span class="block mt-7">
+              <span class="block text-2xl sm:text-3xl font-black text-sage-900">مساحة ولي الأمر</span>
+              <span class="block mt-3 text-base sm:text-lg leading-relaxed text-sand-800 font-medium">إرشادات وموارد عملية لمساندة أبنائك والتعامل مع التحديات التربوية بهدوء ووعي.</span>
+            </span>
+          </button>
         </div>
-      </section>
-    </main>
-
-    <!-- الخصوصية -->
-    <section class="mb-10 rounded-4xl border border-sand-200 bg-white/80 p-6 sm:p-8">
-      <div class="flex items-start gap-4">
-        <div class="shrink-0 w-12 h-12 rounded-2xl bg-sage-100 flex items-center justify-center text-2xl">🔒</div>
-        <div>
-          <h2 class="text-lg font-extrabold text-sage-900">خصوصيتك مهمة</h2>
-          <p class="mt-2 text-sm text-sand-800 leading-relaxed">
-            الأدوات الرقمية وسيلة مساندة وتوعوية، ولا تُغني عن التواصل المباشر مع المرشد التربوي عند الحاجة. تختلف طريقة التعامل مع المعلومات من أداة لأخرى؛ لذلك لا تُدخل معلومات شديدة الحساسية إلا بعد فهم طريقة عمل الأداة وما توضحه بشأن الخصوصية.
-          </p>
+        <div id="selectedSpaceBar" class="hidden mt-6 items-center justify-between gap-3">
+          <p id="selectedSpaceTitle" class="text-lg font-extrabold text-sage-900"></p>
+          <button id="backToSpaces" type="button" class="rounded-full border border-sand-200 bg-white px-4 py-2 text-sm font-bold text-sage-800 hover:bg-sage-100">← الرجوع للمساحتين</button>
         </div>
-      </div>
-    </section>
+        <p id="resultCount" class="mt-4 text-xs text-sand-800" aria-live="polite"></p>'''
+assert old in s
+s=s.replace(old,new)
+old2='''        <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>'''
+new2='''        <div id="cardsGrid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>'''
+assert old2 in s
+s=s.replace(old2,new2)
+# Replace state and matching category logic
+s=s.replace('''    const filterButtons = [...document.querySelectorAll(".filter-btn")];''','''    const spaceButtons = [...document.querySelectorAll("[data-space]")];
+    const spaceCards = document.getElementById("spaceCards");
+    const selectedSpaceBar = document.getElementById("selectedSpaceBar");
+    const selectedSpaceTitle = document.getElementById("selectedSpaceTitle");
+    const backToSpaces = document.getElementById("backToSpaces");''')
+s=s.replace('''    let activeFilter = "all";''','''    let activeFilter = null;
 
-    <footer class="border-t border-sand-200 py-7 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-right text-xs text-sand-800">
-      <div>
-        <strong class="text-sage-900">مدرسة ابن عباس الثانوية للبنين</strong>
-        <span> — بوابة المرشد الرقمي</span>
-      </div>
-      <div>المرشد التربوي: <strong class="text-sage-900">وصفي الطعيمات</strong> — قسم الإرشاد، لواء الجامعة</div>
-    </footer>
-  </div>
-
-  <script>
-    /*
-      قائمة الروابط:
-      أضف أي مادة جديدة داخل القائمة بنفس التنسيق.
-      category تقبل: student أو parent أو library أو أكثر من فئة.
-    */
-    const resources = [
-      {
-        title: "تواصل مع المرشد",
-        description: "قناة للتواصل مع المرشد التربوي وإرسال الاستفسارات أو الملاحظات.",
-        category: ["student", "parent"],
-        label: "للطلاب وأولياء الأمور",
-        icon: "💬",
-        action: "افتح صفحة التواصل",
-        url: "https://script.google.com/macros/s/AKfycbzt_1W-sluRF6LYKVmkgW7H7Bfn-vdPM0IoN80uhu29s9Y2OcIhsgAY7t5tMLrIA9C5Mg/exec",
-        keywords: "تواصل المرشد استفسار ملاحظة اتصال"
-      },
-      {
-        title: "بتتعرّض للتنمّر؟ اعرف كيف تتصرّف",
-        description: "موقف إرشادي يساعدك على التفكير بخيارات آمنة وفعّالة للتعامل مع التنمّر.",
-        category: ["student"],
-        label: "للطلاب",
-        icon: "🛡️",
-        action: "افتح الأداة",
-        url: "https://script.google.com/macros/s/AKfycbzwsaJ84JLWfTVh_JcylQZVA0-yDAjvQLi1clJFBYdhm1hA-IiUsyVTEF7OoOSUNEOpTg/exec",
-        keywords: "تنمر موقف مهارة أذى زملاء"
-      },
-      {
-        title: "مساحتي الآمنة",
-        description: "لما تتغيّر ظروف البيت، تذكّر إنك مش مضطر تواجه كل شيء لحالك.",
-        category: ["student"],
-        label: "للطلاب",
-        icon: "🏡",
-        action: "افتح المساحة",
-        url: "https://script.google.com/macros/s/AKfycbxcDZ-bY_RedMtkisrI5cP0JASMNfPAkyWjFeCWNvvyfPmfhzRD4wdoDKUR7RIkTWaw0Q/exec",
-        keywords: "البيت الأسرة ظروف منزل أمان مساندة"
-      },
-      {
-        title: "اختار تصرّفك",
-        description: "جرّب التفكير ببدائل مختلفة وحلول واعية في مواقف من الحياة المدرسية.",
-        category: ["student"],
-        label: "للطلاب",
-        icon: "🎯",
-        action: "ابدأ اللعبة",
-        url: "https://script.google.com/macros/s/AKfycby83f9vtumnWL5Hn_oWFjr4MuS-ja7uX4RqahjDO7XCEvJiyRGScpBTuREKptWcsfwpQg/exec",
-        keywords: "لعبة مواقف مدرسية قرار سلوك تصرف"
-      },
-      {
-        title: "خطّطها صح",
-        description: "نظّم وقتك ورتّب جدولك الدراسي بطريقة سهلة تناسب يومك.",
-        category: ["student"],
-        label: "للطلاب",
-        icon: "🗓️",
-        action: "نظّم جدولك",
-        url: "https://script.google.com/macros/s/AKfycbzY8h4QoIilLdkilvmZWXLoX7ZxelDHLsniRZEASLeztCiZzw7mbiyQ6Gf_9tMpFBSf/exec",
-        keywords: "تخطيط تنظيم الوقت الدراسة واجبات جدول امتحانات"
-      },
-      {
-        title: "ساعدني أفهم مشاعري",
-        description: "مساحة للتعرّف إلى مشاعرك وتسميتها والتعبير عنها.",
-        category: ["student"],
-        label: "للطلاب",
-        icon: "💭",
-        action: "افتح الأداة",
-        url: "https://script.google.com/macros/s/AKfycbyBisgrvf5YCOsYjlRMGpX0I_bQAoVrpi_s9f_2f7z7c3mxvMurcsLy_iCyRmiYbkH2Nw/exec",
-        keywords: "مشاعر ضيق توتر حزن غضب فهم النفس"
-      },
-      {
-        title: "لماذا أشعر بالضيق والتوتر؟",
-        description: "مادة إرشادية عن الضيق والتوتر، تتضمن محتوى يساعد على فهم المشاعر.",
-        category: ["student", "library"],
-        label: "مكتبة إرشادية",
-        icon: "🌦️",
-        action: "اقرأ المادة",
-        url: "https://sites.google.com/view/orcalus/لماذا-اشعر-بالضيق-والتوتر",
-        keywords: "ضيق توتر مشاعر فيديو فهم النفس"
-      },
-      {
-        title: "مساحة هدوء",
-        description: "تمارين وتطبيقات مهارية للتعامل مع الضغوط اليومية واستعادة الهدوء.",
-        category: ["student"],
-        label: "للطلاب",
-        icon: "🍃",
-        action: "ابدأ التمرين",
-        url: "https://script.google.com/macros/s/AKfycbzxr7vzWVYaDjOtgI71jQsN-cZPO2mpe_HrlvkH-9QdfU1HIvUgiku2rR1aOtpHV48F6w/exec",
-        keywords: "هدوء استرخاء ضغط قلق تنفس تمارين"
-      },
-      {
-        title: "بوصلة الحقول الدراسية",
-        description: "أداة لاستكشاف الميول والحقول الدراسية والتفكير في الخيارات المناسبة.",
-        category: ["student"],
-        label: "للطلاب",
-        icon: "🧭",
-        action: "اكتشف بوصلتك",
-        url: "https://script.google.com/macros/s/AKfycbyQOSnkgO-saUBR-m7x8fGW45Xf_gL7JegTrqQ2U_Mz-ZhTuUTqGa06I8T9DsOytC6DEQ/exec",
-        keywords: "ميول مهنية حقول دراسية اختيار المسار التوجيهي"
-      },
-      {
-        title: "ابني يتعرّض للتنمّر",
-        description: "إرشادات لمساندة الابن والتعامل مع التنمّر والتواصل معه بهدوء.",
-        category: ["parent"],
-        label: "لولي الأمر",
-        icon: "🤝",
-        action: "اقرأ الإرشادات",
-        url: "https://script.google.com/macros/s/AKfycbxq2-VoGH9u_tfdSUpVBQaQfujG6B2SVJ2bO3Xr5ztuvwEq7R6XH5zKxR5WOi_Igzmr/exec",
-        keywords: "ولي أمر تنمر ابني ابنتي الأسرة المدرسة"
-      },
-      {
-        title: "اكتشفت إن ابني بدخّن",
-        description: "خطوات للتعامل مع الموقف وفتح حوار هادئ وبنّاء مع الابن.",
-        category: ["parent"],
-        label: "لولي الأمر",
-        icon: "💬",
-        action: "اقرأ الإرشادات",
-        url: "https://script.google.com/macros/s/AKfycbwtfefUzJLZEDuVuHP7XiubHEa8VHTQR9kq_TAruntfQNar1Oc8hJc7OV-AeMdGfc4/exec",
-        keywords: "تدخين ابني سجائر مراهق ولي أمر"
-      },
-      {
-        title: "ابني مش راضي يدرس",
-        description: "أفكار لفهم أسباب رفض الدراسة والبدء بخطوات تساعد على استعادة الدافعية.",
-        category: ["parent"],
-        label: "لولي الأمر",
-        icon: "📚",
-        action: "اقرأ الإرشادات",
-        url: "https://script.google.com/macros/s/AKfycbxjN704X2u2aLgvKyzNE81PUAH60mSV_OgKmCn56C3Bl7IwvUTpHn5XYAFgfOLL_sBB/exec",
-        keywords: "الدراسة الدافعية واجبات تحصيل مدرسة ابني"
-      },
-      {
-        title: "دليل التربية الواعية للمراهقين",
-        description: "مادة إرشادية مساندة للأسرة لفهم مرحلة المراهقة والتعامل مع الأبناء.",
-        category: ["parent", "library"],
-        label: "مكتبة إرشادية",
-        icon: "🌱",
-        action: "افتح الدليل",
-        url: "https://sites.google.com/view/orcalus/دليل-التربية-الواعية-للمراهقين",
-        keywords: "تربية واعية مراهقة الأسرة الأبناء الوالدين"
-      },
-      {
-        title: "التعامل مع قلق الاختبار",
-        description: "إرشادات عملية لمساندة الأبناء والتعامل مع القلق قبل الاختبارات.",
-        category: ["parent", "library"],
-        label: "مكتبة إرشادية",
-        icon: "📝",
-        action: "افتح المادة",
-        url: "https://sites.google.com/view/orcalus/التعامل-مع-قلق-الاختبار",
-        keywords: "قلق الاختبار امتحانات توتر دراسة ولي أمر"
-      },
-      {
-        title: "تأثير قلة النوم على المراهقين",
-        description: "مادة توعوية عن النوم لدى المراهقين وعلاقته بالتركيز والتوازن الرقمي.",
-        category: ["parent", "library"],
-        label: "مكتبة إرشادية",
-        icon: "🌙",
-        action: "افتح المادة",
-        url: "https://sites.google.com/view/orcalus/تاثير-قلة-النوم-على-المراهقين",
-        keywords: "قلة النوم المراهقين الهاتف الهواتف الذكية السهر التركيز"
-      }
-    ];
-
-    const grid = document.getElementById("cardsGrid");
-    const searchInput = document.getElementById("searchInput");
-    const filterButtons = [...document.querySelectorAll(".filter-btn")];
-    const emptyMessage = document.getElementById("emptyMessage");
-    const resultCount = document.getElementById("resultCount");
-    let activeFilter = "all";
-
-    function createCard(item) {
-      const card = document.createElement("a");
-      card.href = item.url;
-      card.target = "_blank";
-      card.rel = "noopener noreferrer";
-      card.className = "organic-card rounded-4xl p-6 flex flex-col min-h-64";
-      card.dataset.category = item.category.join(" ");
-      card.dataset.search = (item.title + " " + item.description + " " + item.keywords).toLocaleLowerCase("ar");
-
-      const top = document.createElement("div");
-      top.className = "flex items-start justify-between gap-3 mb-5";
-
-      const icon = document.createElement("span");
-      icon.className = "w-12 h-12 shrink-0 rounded-2xl bg-sage-100 flex items-center justify-center text-2xl";
-      icon.textContent = item.icon;
-
-      const label = document.createElement("span");
-      label.className = "rounded-full bg-sand-100 px-3 py-2 text-xs font-bold text-sage-800";
-      label.textContent = item.label;
-      top.append(icon, label);
-
-      const title = document.createElement("h3");
-      title.className = "text-lg font-extrabold text-sage-900 leading-snug";
-      title.textContent = item.title;
-
-      const description = document.createElement("p");
-      description.className = "mt-3 text-sm text-sand-800 leading-relaxed";
-      description.textContent = item.description;
-
-      const bottom = document.createElement("div");
-      bottom.className = "mt-auto pt-5 flex items-center justify-between gap-3 text-sm font-extrabold text-sage-700";
-
-      const action = document.createElement("span");
-      action.textContent = item.action;
-
-      const arrow = document.createElement("span");
-      arrow.textContent = "←";
-      arrow.setAttribute("aria-hidden", "true");
-      bottom.append(action, arrow);
-
-      card.append(top, title, description, bottom);
-      return card;
+    function chooseSpace(space) {
+      activeFilter = space;
+      spaceCards.classList.add("hidden");
+      selectedSpaceBar.classList.remove("hidden");
+      selectedSpaceBar.classList.add("flex");
+      grid.classList.remove("hidden");
+      selectedSpaceTitle.textContent = space === "student" ? "مساحة الطلاب" : "مساحة ولي الأمر";
+      renderCards();
     }
 
-    function renderCards() {
-      const query = searchInput.value.trim().toLocaleLowerCase("ar");
-      let count = 0;
-      grid.replaceChildren();
-
-      resources.forEach(item => {
-        const text = (item.title + " " + item.description + " " + item.keywords).toLocaleLowerCase("ar");
-        const matchesCategory = activeFilter === "all" || item.category.includes(activeFilter);
-        const matchesSearch = !query || text.includes(query);
-
-        if (matchesCategory && matchesSearch) {
-          grid.appendChild(createCard(item));
-          count++;
-        }
-      });
-
-      emptyMessage.classList.toggle("hidden", count !== 0);
-      resultCount.textContent = "عدد المواد الظاهرة: " + count;
-    }
-
-    searchInput.addEventListener("input", renderCards);
-
-    filterButtons.forEach(button => {
+    function returnToSpaces() {
+      activeFilter = null;
+      spaceCards.classList.remove("hidden");
+      selectedSpaceBar.classList.add("hidden");
+      selectedSpaceBar.classList.remove("flex");
+      grid.classList.add("hidden");
+      searchInput.value = "";
+      resultCount.textContent = "";
+      emptyMessage.classList.add("hidden");
+    }''')
+s=s.replace('''        const matchesCategory = activeFilter === "all" || item.category.includes(activeFilter);''','''        const matchesCategory = activeFilter !== null && item.category.includes(activeFilter);''')
+old3='''    filterButtons.forEach(button => {
       button.addEventListener("click", () => {
         activeFilter = button.dataset.filter;
 
@@ -534,7 +92,27 @@
       searchInput.focus();
     });
 
-    renderCards();
-  </script>
-</body>
-</html>
+    renderCards();'''
+new3='''    spaceButtons.forEach(button => {
+      button.addEventListener("click", () => chooseSpace(button.dataset.space));
+    });
+
+    backToSpaces.addEventListener("click", returnToSpaces);
+
+    document.getElementById("resetSearch").addEventListener("click", () => {
+      searchInput.value = "";
+      renderCards();
+      searchInput.focus();
+    });
+
+    searchInput.addEventListener("focus", () => {
+      if (activeFilter === null) {
+        // Keep the landing view clean until the visitor chooses a space.
+      }
+    });'''
+assert old3 in s
+s=s.replace(old3,new3)
+# Search input only filters current category, as intended. Add friendly prompt when not selected? okay.
+out="/mnt/data/index.html"
+with open(out,"w",encoding="utf-8") as f: f.write(s)
+print("saved",out,"bytes",len(s),"filterContainer" in s, "الكل 🌟" in s, "المكتبة الإرشادية 📚</button>" in s)
